@@ -1,0 +1,9 @@
+{
+  "fbusinesscenter": { "email": "your-falabella-user", "password": "your-falabella-password" },
+  "ripley": { "email": "", "password": "" },
+  "mercadolibre": { "email": "your-mercadolibre-user", "password": "your-mercadolibre-password" },
+  "walmart": { "email": "your-walmart-user", "password": "your-walmart-password" },
+  "capsolver": { "apiKey": "CAP-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" },
+  "telegram": { "token": "123456789:REPLACE_WITH_BOT_TOKEN", "recipientChatIds": [{ "id": 0, "username": "" }] },
+  "ai": { "baseUrl": "https://api.openai.com/v1", "apiKey": "sk-replace-me", "model": "gpt-4o-mini" }
+}

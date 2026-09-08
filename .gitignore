@@ -1,0 +1,25 @@
+node_modules/
+package-lock.json
+
+# Runtime output
+/*.log
+/nohup.out
+cron.log
+downloads/
+upload-records-*.jsonl
+submitted_jobs.json
+otp-state.json
+otp-relay-state.json
+.ai-cache/
+
+# Browser profiles / session cookies
+chrome-profile/
+camoufox-profile/
+
+# Secrets - never commit these
+.env
+keys.json
+token.json
+client_secret.json
+gdrive-token/token.json
+gdrive-token/client_secret.json
