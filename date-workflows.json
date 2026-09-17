@@ -1,0 +1,171 @@
+{
+  "workflowDateVariables": {
+    "falabellaVentasHistoricas": "thisMonth",
+    "falabellaAnalisisInventario": "none",
+    "sodimacVentasHistoricas": "customMonthToYesterday",
+    "sodimacAnalisisInventario": "none",
+    "tottusVentasHistoricas": "thisMonth",
+    "tottusVentasInventario": "yesterday"
+  },
+  "dateModes": {
+    "none": {
+      "steps": []
+    },
+    "thisMonth": {
+      "open": {
+        "selector": "span[role=\"button\"]",
+        "text": "Previous Week"
+      },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "This Month" }
+      ]
+    },
+    "today": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Today" }]
+    },
+    "yesterday": {
+      "open": {
+        "selector": "span[role=\"button\"][aria-selected=\"true\"]"
+      },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Yesterday" }
+      ]
+    },
+    "last7Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Last 7 Days" }]
+    },
+    "last14Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Last 14 Days" }]
+    },
+    "last28Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Last 28 Days" }
+      ]
+    },
+    "last30Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Last 30 Days" }]
+    },
+    "last90Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Last 90 Days" }]
+    },
+    "last180Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Last 180 Days" }
+      ]
+    },
+    "last365Days": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Last 365 Days" }
+      ]
+    },
+    "yearToDate": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [{ "action": "clickText", "text": "Year To Date" }]
+    },
+    "thisWeek": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "This Week" }
+      ]
+    },
+    "thisQuarter": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "This Quarter" }
+      ]
+    },
+    "thisYear": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "This Year" }
+      ]
+    },
+    "previousWeek": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Previous Week" }
+      ]
+    },
+    "previousMonth": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Previous Month" }
+      ]
+    },
+    "previousQuarter": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Previous Quarter" }
+      ]
+    },
+    "previousYear": {
+      "open": { "selector": "span[role=\"button\"][aria-selected=\"true\"]" },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "More" },
+        { "action": "clickText", "text": "Previous Year" }
+      ]
+    },
+    "customMonthToYesterday": {
+      "open": {
+        "selector": "span[role=\"button\"][aria-selected=\"true\"]"
+      },
+      "dialog": true,
+      "steps": [
+        { "action": "clickText", "text": "Custom" },
+        {
+          "action": "fill",
+          "field": "date-from-text-input",
+          "selector": "[data-testid=\"date-from-text-input\"]",
+          "value": "firstDayOfCurrentMonth"
+        },
+        {
+          "action": "fill",
+          "field": "date-to-text-input",
+          "selector": "[data-testid=\"date-to-text-input\"]",
+          "value": "yesterday"
+        },
+        {
+          "action": "click",
+          "selector": "button[class*=\"RunButton__IconButtonWithBackground\"]"
+        }
+      ]
+    }
+  }
+}
